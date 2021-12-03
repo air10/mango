@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: mango-backup
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+        
 # backup datasource
 mango:
   backup:
@@ -12,3 +17,9 @@ mango:
       userName: root
       password: 123a123b
       database: mango
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
